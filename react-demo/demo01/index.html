@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  <style>
+    .gggg{
+     font-size:;
+     font-family:"微软雅黑";
+     color:rgba(0, 0, 0, 0.6);
+}
+  </style>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var MyTitle = React.createClass({
+  getDefaultProps : function () {
+    return {
+      title : 'Hello World gggggg'
+    };
+  },
+
+  render: function() {
+     return <h1> {this.props.title} </h1>;
+   }
+});
+
+ReactDOM.render(
+  <MyTitle />,
+  document.body
+);
+    </script>
+  </body>
+</html>

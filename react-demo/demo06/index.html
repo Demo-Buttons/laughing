@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style>
+    .text{
+      font-family: "微软雅黑";
+      color:rgba(0,0,0,0.8);
+    }
+    </style>
+  </head>
+  <body>
+    <div id="example"></div>
+  <!--  <script type="text/babel">
+
+      var data = 1235678910;
+
+      var MyTitle = React.createClass({
+        propTypes: {
+          title: React.PropTypes.string.isRequired,
+        },
+
+        render: function() {
+          return <h1> {this.props.title} </h1>;
+        }
+      });
+
+      ReactDOM.render(
+        <MyTitle title={data} />,
+        document.getElementById('example')
+      );  
+
+    </script> -->
+    <script type="text/babel">
+      var Mytitle = React.createClass({
+        getDefaultProps : function () {
+          return {
+             title : 'Hi JACKchen,I do not take anymore',
+             name: 'gggggg'
+          };
+        },
+
+        render: function() {
+         return <h1 className="text"> {this.props.title} {this.props.name}</h1>;
+        }
+      });
+
+      ReactDOM.render(
+       <Mytitle />,
+       document.body
+      );
+    </script>
+  </body>
+</html>
+

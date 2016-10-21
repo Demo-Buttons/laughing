@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style>
+    .sex{
+      color:black;
+      font-family: "微软雅黑";
+    }
+    </style>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var NotesList = React.createClass({
+        render: function() {
+          return (
+            <ol className="sex">
+              {
+                React.Children.map(this.props.children, function (child) {
+                  return <li>{child}</li>;
+                })
+              }
+            </ol>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <NotesList>
+          <span>hello</span>
+          <span>world</span>
+          <span>ggggg</span>
+          <span>ppppp</span>
+          <span>eeeeeee</span>
+        </NotesList>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  <style>
+    .text{
+     font-size:30px;
+     font-family:"微软雅黑";
+     color:rgba(0, 0, 0, 0.6);
+}
+  </style>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var HelloMessage = React.createClass({
+        render: function() {
+          return <div className="text">Hello {this.props.title} {this.props.name} </div>;
+        }
+      });
+
+      ReactDOM.render(
+        <HelloMessage name="John" title="Mr"/>,
+        document.getElementById('example')
+      );
+    </script>
+
+  </body>
+</html>

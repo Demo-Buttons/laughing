@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style>
+    .gg{
+      color:black;
+      font-size:20px;
+      font-family: “微软雅黑”;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="example"></div>
+   <!--  <script type="text/babel">
+      var names = ['Alice', 'Emily', 'Kate'];
+
+      ReactDOM.render(
+        <div>
+        {
+          names.map(function (name) {
+            return <div>Hello, {name}!</div>
+          })
+        }
+        </div>,
+        document.getElementById('example')
+      );
+    </script>  -->
+  <script type="text/babel">
+       var names = ['Alice', 'Emily', 'Kate'];
+       ReactDOM.render(
+       <div>
+         {
+          names.map(function (name) {
+          return <div className="gg">I don't take anymore {name}</div>
+          })
+         }
+       </div>,
+       document.getElementById('example')
+       );
+    </script>  
+  </body>
+</html>
